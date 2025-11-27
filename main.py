@@ -110,11 +110,7 @@ app = FastAPI(
 # Allow the React dev server (running on Vite) to call this API from the browser.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://127.0.0.1:5173",
-        "http://localhost:5173",
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -160,3 +156,5 @@ def predict_personality(payload: PersonalityInput) -> dict:
 
 
 #uvicorn main:app --reload --port 8000
+
+#render deployed link: https://personapredict-backend.onrender.com/
