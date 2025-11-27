@@ -155,6 +155,6 @@ def predict_personality(payload: PersonalityInput) -> dict:
     }
 
 
-#uvicorn main:app --reload --port 8000
+#uvicorn main:app --reload --port 8000 ..........(for local testing)
 
 #render deployed link: https://personapredict-backend.onrender.com/
